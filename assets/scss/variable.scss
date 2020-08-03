@@ -1,0 +1,16 @@
+// colors
+$darkyellow: #ceccae;
+$darkyellow-clear: rgba(206, 204, 174, 0.6);
+$black: #333;
+
+// container size
+$container_size: 1260px;
+$pc: $container_size;
+$tab: 768px;
+$sp: 460px;
+
+// media query
+$mq_xl: 'screen and (min-width: #{$pc + 1px})';
+$mq_pc: 'screen and (min-width: #{$tab + 1px})';
+$mq_tab: 'screen and (max-width: #{$tab})';
+$mq_sp: 'screen and (max-width: #{$sp})';

@@ -2,17 +2,42 @@ module.exports = {
   root: true,
   env: {
     browser: true,
-    node: true
+    node: true,
   },
   parserOptions: {
-    parser: 'babel-eslint'
+    parser: 'babel-eslint',
   },
   extends: [
-    '@nuxtjs',
-    'plugin:nuxt/recommended'
+    'eslint:recommended',
+    'plugin:vue/recommended',
+    'plugin:prettier/recommended',
+    'prettier/vue',
   ],
-  plugins: [
-  ],
+  plugins: ['prettier', 'eslint-plugin-prettier'],
   // add your custom rules here
-  rules: {}
-}
+  rules: {
+    'no-plusplus': 'off',
+    'prettier/prettier': 'error',
+    'space-in-parens': ['error', 'always'],
+    'space-before-function-paren': ['error', 'always'],
+    'vue/html-self-closing': [
+      'error',
+      {
+        html: {
+          void: 'always',
+          normal: 'never',
+          component: 'always',
+        },
+      },
+    ],
+    semi: ['error', 'always'],
+    'no-var': 2,
+    quotes: 'off',
+    'comma-dangle': [
+      'error',
+      {
+        always,
+      },
+    ],
+  },
+};
