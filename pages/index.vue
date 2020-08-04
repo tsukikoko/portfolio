@@ -4,21 +4,33 @@
       <logo />
       <Slime />
       <Info />
+      <Command />
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+import Command from '~/components/Command.vue';
+export default {
+  components: {
+    Command,
+  },
+};
 </script>
 
 <style lang="scss" scoped>
 .container {
-  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 100%;
   min-height: 100vh;
+  background: $black;
+  margin: 0 auto;
 }
 .inner {
   position: relative;
+  background: #fff;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -26,7 +38,8 @@ export default {};
   text-align: center;
 
   @media #{$mq_pc} {
-    max-width: 1024px;
+    max-width: 960px;
+    min-width: 768px;
     margin: 0 auto;
     padding: 2%;
   }

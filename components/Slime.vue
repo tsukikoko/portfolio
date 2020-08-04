@@ -1,7 +1,9 @@
 <template>
-  <div class="slime">
-    <div class="slime_body"></div>
-  </div>
+  <transition>
+    <div class="slime scale-up">
+      <div class="slime_body"></div>
+    </div>
+  </transition>
 </template>
 <style scoped lang="scss">
 .slime {
@@ -87,5 +89,20 @@
     130px 160px 0 0 #000000;
   height: 10px;
   width: 10px;
+}
+.scale-up {
+  animation: scale-up 0.8s;
+}
+
+@keyframes scale-up {
+  0% {
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 </style>
