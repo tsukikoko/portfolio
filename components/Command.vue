@@ -50,13 +50,12 @@ export default {
       cmd03Flg: false,
       cmd04Flg: false,
       talkCount: 0,
-      talk: ['talk1', 'talk2', 'talk3'],
+      talk: [
+        'タハラツキコです。実はドラクエはあまりプレイしたことないです。',
+        '趣味は写真を撮ったり美味しい物を食べたりすることです。',
+        '最近ハマっている食べ物は冷凍食品のさばめしです。',
+      ],
     };
-  },
-  computed: {
-    count() {
-      return this.$store.state.counter.count;
-    },
   },
   methods: {
     clickCmd01() {
@@ -143,15 +142,15 @@ export default {
       content: '▼';
       display: block;
       position: absolute;
-
-      right: -5px;
       cursor: pointer;
       animation: flash 0.8s ease-in-out infinite alternate;
       @media #{$mq_pc} {
-        bottom: 5px;
+        top: 48px;
+        right: -5px;
       }
       @media #{$mq_tab} {
-        top: 5px;
+        top: 52px;
+        right: -8px;
       }
     }
   }
