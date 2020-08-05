@@ -88,5 +88,8 @@ export default {
         },
       },
     },
+    router: {
+      base: '/tsukikoko.github.io/'
+    },
   },
 };
