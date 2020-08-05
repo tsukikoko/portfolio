@@ -11,7 +11,7 @@
           <span v-if="talkCount === talk.length -1" @click="clickBackBtn" class="command-mark"></span>
         </li>
         <li v-if="isDefaultFlg">
-          <button class="cmd-02">つよさ</button>
+          <nuxt-link to="/status" class="cmd-02">つよさ</nuxt-link>
         </li>
         <li v-if="isDefaultFlg" @click="clickCmd03">
           <button class="cmd-03">じゅもん</button>
@@ -52,7 +52,7 @@ export default {
       talkCount: 0,
       talk: [
         'タハラツキコです。実はドラクエはあまりプレイしたことないです。',
-        '趣味は写真を撮ったり美味しい物を食べたりすることです。',
+        '趣味は写真を撮ったり、美味しい物を食べたりすることです。',
         '最近ハマっている食べ物は冷凍食品のさばめしです。',
       ],
     };

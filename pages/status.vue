@@ -1,27 +1,17 @@
 <template>
   <div class="container">
     <div class="inner">
-      <logo />
-      <Slime />
-      <Info />
-      <Command />
+      <h2>ステータス</h2>
+      <SkillList />
+      <a href="https://tahara-tsukiko-resume.netlify.app/" target="_blank">レジュメ(簡易版)はこちら</a>
+      <nuxt-link to="/" class="link">Topへ戻る</nuxt-link>
     </div>
   </div>
 </template>
 
-<script>
-export default {
-  mounted() {
-    this.$nextTick(() => {
-      this.$nuxt.$loading.start();
-      setTimeout(() => this.$nuxt.$loading.finish(), 100);
-    });
-  },
-};
-</script>
-
 <style lang="scss" scoped>
 .container {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -29,6 +19,7 @@ export default {
   min-height: 100vh;
   background: $black;
   margin: 0 auto;
+  padding: 2% 0;
 }
 .inner {
   position: relative;
@@ -47,6 +38,20 @@ export default {
   }
   @media #{$mq_tab} {
     padding: 4% 2%;
+  }
+}
+h2 {
+  font-size: 2.2rem;
+  margin-top: 16px;
+}
+a {
+  display: block;
+  margin-top: 16px;
+  @media #{$mq_pc} {
+    &:hover,
+    &:focus {
+      animation: flash 0.8s ease-in-out infinite alternate;
+    }
   }
 }
 </style>
